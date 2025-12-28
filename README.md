@@ -1,4 +1,11 @@
+<p align="center">
+  <img src="logo.png" alt="Logo" width="128" height="128" />
+</p>
+
 # Android System Explorer
+
+[![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/SalemAl-Zuhairi.android-system-explorer?style=for-the-badge&label=VS%20Code%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=SalemAl-Zuhairi.android-system-explorer&ssr=false)
+[![Open VSX](https://img.shields.io/open-vsx/v/SalemAl-Zuhairi/android-system-explorer?style=for-the-badge&label=Open%20VSX&logo=eclipse-ide)](https://open-vsx.org/extension/SalemAl-Zuhairi/android-system-explorer)
 
 **Android System Explorer** is a VS Code extension that allows you to browse, manage, and download files from connected Android devices directly within VS Code. It mimics the "Device File Explorer" feature found in Android Studio, but with the lightweight convenience of VS Code.
 

@@ -6,7 +6,31 @@
   "engines": {
     "vscode": "^1.80.0"
   },
+  "publisher": "Salem-Al-Zuhairi",
+  "icon": "logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Salem-Al-Zuhairi/android-file-explorer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Salem-Al-Zuhairi/android-file-explorer/issues"
+  },
+  "homepage": "https://github.com/Salem-Al-Zuhairi/android-file-explorer#readme",
+  "keywords": [
+    "android",
+    "adb",
+    "file explorer",
+    "device explorer",
+    "filesystem",
+    "debug",
+    "Emulator",
+    "Simulator",
+    ""
+  ],
   "categories": [
+    "Debuggers",
+    "Visualization",
+    "Testing",
     "Other"
   ],
   "activationEvents": [
