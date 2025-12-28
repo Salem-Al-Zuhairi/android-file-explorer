@@ -1,0 +1,111 @@
+{
+  "name": "android-system-explorer",
+  "displayName": "Android System Explorer",
+  "description": "Browse and manage Android device files via ADB",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:androidExplorer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "android-explorer-container",
+          "title": "Android",
+          "icon": "$(device-mobile)"
+        }
+      ]
+    },
+    "views": {
+      "android-explorer-container": [
+        {
+          "id": "androidExplorer",
+          "name": "Devices"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "androidSystemExplorer.refresh",
+        "title": "Refresh Devices",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "androidSystemExplorer.pullFile",
+        "title": "Save As...",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "androidSystemExplorer.copyPath",
+        "title": "Copy Path",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "androidSystemExplorer.openFile",
+        "title": "Open",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "androidSystemExplorer.synchronize",
+        "title": "Synchronize",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "androidSystemExplorer.rootDevice",
+        "title": "Restart ADB Root",
+        "icon": "$(shield)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "androidSystemExplorer.refresh",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "androidSystemExplorer.openFile",
+          "when": "viewItem == file",
+          "group": "1_actions"
+        },
+        {
+          "command": "androidSystemExplorer.pullFile",
+          "when": "viewItem == file",
+          "group": "1_actions"
+        },
+        {
+          "command": "androidSystemExplorer.synchronize",
+          "when": "viewItem == folder",
+          "group": "2_modification"
+        },
+        {
+          "command": "androidSystemExplorer.copyPath",
+          "group": "3_clipboard"
+        },
+        {
+          "command": "androidSystemExplorer.rootDevice",
+          "when": "viewItem == device",
+          "group": "9_device"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.14.6",
+    "typescript": "^5.1.3"
+  }
+}
